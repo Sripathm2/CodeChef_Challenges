@@ -1,0 +1,32 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		for(int t=sc.nextInt(); t>0 ; t--){
+		    int n = sc.nextInt();
+		    int arr[]= new int[n];
+		    int ctr = 0;
+		    for(int i=0 ; i < n ;i++){
+		        arr[i] = sc.nextInt();
+		        int sum = 0 ;
+		        int product = 1;
+		        for(int j=i;j>=0;j--){
+		            sum += arr[j];
+		            product *= arr[j];
+		            ctr += sum == product ? 1:0;
+		            //System.out.println(sum +"   " + product + "    " + i + "  " + j +"   " + ctr);
+		        }
+		    }
+		    System.out.println(ctr);
+		}
+		
+	}
+}
